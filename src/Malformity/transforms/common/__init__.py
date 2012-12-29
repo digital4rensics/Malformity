@@ -13,5 +13,6 @@ __all__ = [
     'entities',
     'malwr',
     'pdns',
-    'threatexpert'
+    'threatexpert',
+    'vicheck',
 ]

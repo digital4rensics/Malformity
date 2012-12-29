@@ -10,6 +10,10 @@ __maintainer__ = 'Keith Gilbert - @digital4rensics'
 __email__ = 'Keith@digital4rensics.com'
 __status__ = 'Development'
 __all__ = [
+    'vicheck_hash2dhash',
+    'vicheck_hash2domain',
+    'vicheck_hash2registry',
+    'vicheck_hash2mutex',
     'pDNS_Domain2IP',
     'pDNS_IP2Domain',
     'threatexpert_hash2hiddenproc',

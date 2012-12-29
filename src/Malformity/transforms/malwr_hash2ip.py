@@ -1,6 +1,5 @@
 #!/usr/bin/env python
 
-import mechanize
 from BeautifulSoup import BeautifulSoup
 from canari.maltego.utils import debug, progress
 from canari.framework import configure #, superuser

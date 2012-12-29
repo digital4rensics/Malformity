@@ -1,6 +1,5 @@
 #!/usr/bin/env python
 
-import mechanize
 import re
 from BeautifulSoup import BeautifulSoup
 from canari.maltego.entities import IPv4Address
