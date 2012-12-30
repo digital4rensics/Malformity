@@ -3,7 +3,7 @@
 from BeautifulSoup import BeautifulSoup
 from canari.maltego.utils import debug, progress
 from canari.framework import configure
-from canari.maltego.message import MaltegoException
+from canari.maltego.message import Field, MaltegoException
 from common.entities import Hash
 from common.vicheck import build
 
@@ -52,6 +52,8 @@ def dotransform(request, response):
 					pass
 				else:
 					e = Hash(s.text)
+					name = s.previous.previous.previous.text
+					e += Field('Filename', name)
 					response += e
 				count2+=1
 		elif count % 2 == 0:

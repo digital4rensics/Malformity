@@ -10,6 +10,8 @@ __maintainer__ = 'Keith Gilbert - @digital4rensics'
 __email__ = 'Keith@digital4rensics.com'
 __status__ = 'Development'
 __all__ = [
+    'vicheck_filesearch',
+    'vicheck_hash2filename',
     'vicheck_hash2dhash',
     'vicheck_hash2domain',
     'vicheck_hash2registry',
