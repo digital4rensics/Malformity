@@ -29,4 +29,5 @@ __all__ = [
     'threatexpert_hash2mutex',
     'common',
     'threatexpert_hash2ip',
+    'virustotal_hash2name',
 ]
