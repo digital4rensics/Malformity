@@ -1,6 +1,7 @@
 #!/usr/bin/env python
 
 import json
+import datetime
 from canari.maltego.utils import debug, progress
 from canari.framework import configure #, superuser
 from canari.maltego.entities import IPv4Address, Domain
@@ -36,6 +37,12 @@ def dotransform(request, response):
 	for result in results:
 		data = json.loads(result)
 		if data.has_key('rrname'):
-			response += Domain(data['rrname'])
+			first = data['time_first']
+			last = data['time_last']
+			fnice = datetime.datetime.fromtimestamp(int(first)).strftime('%m-%d-%Y')
+			lnice = datetime.datetime.fromtimestamp(int(last)).strftime('%m-%d-%Y')
+			e = Domain(data['rrname'].rstrip('.'))
+			e.linklabel = fnice + ' - ' + lnice
+			response += e
 			
 	return response

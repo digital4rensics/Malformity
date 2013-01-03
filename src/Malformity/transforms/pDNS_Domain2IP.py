@@ -1,9 +1,10 @@
 #!/usr/bin/env python
 
 import json
+import datetime
 from canari.maltego.utils import debug, progress
 from canari.framework import configure #, superuser
-from canari.maltego.entities import IPv4Address, Domain
+from canari.maltego.entities import IPv4Address, Domain, MXRecord, NSRecord
 from common.pdns import query
 
 __author__ = 'Keith Gilbert - @digital4rensics'
@@ -35,8 +36,40 @@ def dotransform(request, response):
 
 	for result in results:
 		data = json.loads(result)
-		if data.has_key('rdata'):
-			for item in data['rdata']:
-				response += IPv4Address(item)
+		if data.has_key('time_first'):
+			first = data['time_first']
+			last = data['time_last']
+		elif data.has_key('zone_time_first'):
+			first = data['zone_time_first']
+			last = data['zone_time_last']
 			
+		fnice = datetime.datetime.fromtimestamp(int(first)).strftime('%m-%d-%Y')
+		lnice = datetime.datetime.fromtimestamp(int(last)).strftime('%m-%d-%Y')
+		
+		if data['rrtype'] == 'A':
+			for item in data['rdata']: 
+				e = IPv4Address(item)
+				e.linklabel = fnice + ' - ' + lnice
+				response += e
+		elif data['rrtype'] == 'NS':
+			for item in data['rdata']:
+				e = NSRecord(item)
+				e.linklabel = fnice + ' - ' + lnice
+				response += e
+		elif data['rrtype'] == 'MX':
+			for item in data['rdata']:
+				e = MXRecord(item)
+				e.linklabel = fnice + ' - ' + lnice
+				response += e
+		elif data['rrtype'] == 'CNAME':
+			for item in data['rdata']:
+				e = Domain(item.rstrip('.'))
+				e.linklabel = fnice + ' - ' + lnice
+				response += e
+		else:
+			for item in data['rdata']:
+				e = IPv4Address(item)
+				e.linklabel = fnice + ' - ' + lnice
+				response += e
+				
 	return response
