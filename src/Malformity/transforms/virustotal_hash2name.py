@@ -1,10 +1,12 @@
 #!/usr/bin/env python
 
 from json import loads
-from sploitego.config import config
-from sploitego.framework import configure
-from sploitego.maltego.message import Label, UIMessage
-from sploitego.maltego.utils import debug
+from canari.maltego.utils import debug, progress
+from canari.framework import configure 
+from canari.maltego.entities import IPv4Address, Domain
+#from sploitego.framework import configure
+#from sploitego.maltego.message import Label, UIMessage
+#from sploitego.maltego.utils import debug
 from urllib import urlopen, urlencode
 from common.entities import Malware, Hash
 
@@ -25,8 +27,8 @@ __all__ = [
 
 @configure(
     label="To malware name [VT]",
-    description="Returns names of malware associated with a particular hash.",
-    uuids=['virustotal.v2.HashToMalware_VT'],
+    description="Returns names of malware associated with a particular hash",
+    uuids=['malformity.v1.VT_Hash2Name'],
     inputs=[('VirusTotal', Hash)]
 )
 def dotransform(request, response):

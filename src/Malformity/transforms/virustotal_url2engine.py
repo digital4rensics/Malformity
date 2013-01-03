@@ -25,8 +25,8 @@ __all__ = [
 
 @configure(
     label="To AV Engine [VT]",
-    description="Returns names of AV engines that flagged the URL.",
-    uuids=['virustotal.v2.MalwareToAntiVirusEngine_VT'],
+    description="Returns names of AV engines that flagged the URL",
+    uuids=['malformity.v1.VT_URL2Engine'],
     inputs=[('VirusTotal', URL)]
 )
 def dotransform(request, response):
