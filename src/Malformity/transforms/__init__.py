@@ -30,4 +30,5 @@ __all__ = [
     'common',
     'threatexpert_hash2ip',
     'virustotal_hash2name',
+    'virustotal_url2engine',
 ]
