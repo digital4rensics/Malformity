@@ -10,6 +10,8 @@ __maintainer__ = 'Keith Gilbert - @digital4rensics'
 __email__ = 'Keith@digital4rensics.com'
 __status__ = 'Development'
 __all__ = [
+    'vt_url2engine',
+    'vt_hash2name',
     'vicheck_filesearch',
     'vicheck_hash2filename',
     'vicheck_hash2dhash',
@@ -28,5 +30,5 @@ __all__ = [
     'malwr_hash2ip',
     'threatexpert_hash2mutex',
     'common',
-    'threatexpert_hash2ip',
+    'threatexpert_hash2ip'
 ]
