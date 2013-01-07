@@ -24,7 +24,7 @@ to generate a transform module and have it automatically added to the `__init__.
 ## 2.0 Installing Malformity
 
 ### 2.1 - Supported Platforms
-Malformity has been tests on Mac OSX. Tranforms are written in Python version 2.7.
+Malformity has been tested on Mac OSX. Transforms are written in Python version 2.7.
 
 ### 2.2 - Requirements
 In order to make full use of Malformity, the setup script will download additional modules.
