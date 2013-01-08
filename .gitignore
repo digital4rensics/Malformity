@@ -1,0 +1,5 @@
+# compiled Python
+*.pyc
+
+# Swap files (e.g. vi)
+*.swp
