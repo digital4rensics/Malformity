@@ -11,7 +11,7 @@ setup(
     package_dir={ '' : 'src' },
     zip_safe=False,
     package_data={
-        '' : [ '*.gif', '*.png', '*.conf' ] # list of resources
+        '' : [ '*.gif', '*.png', '*.conf', '*.mtz' ] # list of resources
     },
     install_requires=[
         'canari==0.3',
