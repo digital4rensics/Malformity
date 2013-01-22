@@ -37,10 +37,16 @@ def dotransform(request, response):
 	for result in results:
 		data = json.loads(result)
 		if data.has_key('rrname'):
-			first = data['time_first']
-			last = data['time_last']
+			if data.has_key('time_first'):
+				first = data['time_first']
+				last = data['time_last']
+			elif data.has_key('zone_time_first'):
+				first = data['zone_time_first']
+				last = data['zone_time_last']
+			
 			fnice = datetime.datetime.fromtimestamp(int(first)).strftime('%m-%d-%Y')
 			lnice = datetime.datetime.fromtimestamp(int(last)).strftime('%m-%d-%Y')
+			
 			e = Domain(data['rrname'].rstrip('.'))
 			e.linklabel = fnice + ' - ' + lnice
 			response += e
