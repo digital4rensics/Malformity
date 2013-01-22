@@ -66,6 +66,8 @@ def dotransform(request, response):
 				e = Domain(item.rstrip('.'))
 				e.linklabel = fnice + ' - ' + lnice
 				response += e
+		elif data['rrtype'] == 'TXT':
+			pass
 		else:
 			for item in data['rdata']:
 				e = IPv4Address(item)
