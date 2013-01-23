@@ -61,6 +61,8 @@ def dotransform(request, response):
 				e = Domain(item.rstrip('.'))
 				e.linklabel = fnice + ' - ' + lnice
 				response += e
+		elif data['rrtype'] == 'A':
+			pass
 		else:
 			type = data['rrtype']
 			for item in data['rdata']:
