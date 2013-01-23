@@ -24,7 +24,7 @@ __all__ = [
 #@superuser
 @configure(
 	label='IP to Domains - pDNS',
-	description='The transform will take an IP address and return domains based on pDNS records',
+	description='The transform will take an IP address and return domains based on pDNS rdata records',
 	uuids=[ 'malformity.v1.pDNS_IP2Domain' ],
 	inputs=[ ( 'pDNS', IPv4Address ) ],
 	debug=True
