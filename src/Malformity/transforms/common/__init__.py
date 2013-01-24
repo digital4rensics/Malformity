@@ -15,4 +15,5 @@ __all__ = [
     'pdns',
     'threatexpert',
     'vicheck',
+    'vt'
 ]

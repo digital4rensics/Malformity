@@ -47,6 +47,7 @@ def dotransform(request, response):
 			fnice = datetime.datetime.fromtimestamp(int(first)).strftime('%m-%d-%Y')
 			lnice = datetime.datetime.fromtimestamp(int(last)).strftime('%m-%d-%Y')
 			
+			print data
 			e = Domain(data['rrname'].rstrip('.'))
 			e.linklabel = fnice + ' - ' + lnice
 			response += e
