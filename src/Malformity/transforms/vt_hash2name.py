@@ -29,7 +29,8 @@ __all__ = [
     label="To malware name [VT]",
     description="Returns names of malware associated with a particular hash",
     uuids=['malformity.v1.VT_Hash2Name'],
-    inputs=[('VirusTotal', Hash)]
+    inputs=[('VirusTotal', Hash)],
+    debug=False
 )
 
 def dotransform(request, response):
@@ -46,7 +47,6 @@ def dotransform(request, response):
     if r.code == 200:
         d = loads(r.read())
         debug('VT output: %s\n' % d)
-
         # If it's not a clean file, tell Maltego the names of the malware
         if d['response_code'] == 1:
             for engine in d['scans'].iteritems():

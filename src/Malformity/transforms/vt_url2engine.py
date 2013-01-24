@@ -30,7 +30,8 @@ __all__ = [
     label="To AV Engine [VT]",
     description="Returns names of AV engines that flagged the URL",
     uuids=['malformity.v1.VT_URL2Engine'],
-    inputs=[('VirusTotal', URL)]
+    inputs=[('VirusTotal', URL)],
+    debug=False
 )
 
 def dotransform(request, response):
