@@ -10,6 +10,7 @@ __maintainer__ = 'Keith Gilbert - @digital4rensics'
 __email__ = 'Keith@digital4rensics.com'
 __status__ = 'Development'
 __all__ = [
+    'bit9_hashdetails',
     'vt_hash2filenames',
     'vt_hash2packer',
     'vt_hash2timestamp',
