@@ -33,3 +33,18 @@ def build(ip):
 		pass
 		
 	return page
+
+def buildas(asn):
+	#Build request
+	url = 'https://isc.sans.edu/asreport.html?as=' + asn
+	browser = mechanize.Browser()
+	
+	#Retrieve page and create BS entity if the page exists
+	try:
+		report = browser.open(url)
+		html = report.read()
+		page = BeautifulSoup(html)
+	except:
+		pass
+		
+	return page
