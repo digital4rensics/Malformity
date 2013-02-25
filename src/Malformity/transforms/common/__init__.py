@@ -17,5 +17,6 @@ __all__ = [
     'threatexpert',
     'vicheck',
     'vt',
-    'isc'
+    'isc',
+    'whois'
 ]
