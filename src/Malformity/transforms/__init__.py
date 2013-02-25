@@ -10,6 +10,13 @@ __maintainer__ = 'Keith Gilbert - @digital4rensics'
 __email__ = 'Keith@digital4rensics.com'
 __status__ = 'Development'
 __all__ = [
+    'cymru_hashcheck',
+    'isc_asreport',
+    'isc_ipreport',
+    'malwr_hash2filename',
+    'pDNS_NS2Domains',
+    'pDNS_wildcardsearch',
+    'bluecoat_sitereview',
     'bit9_hashdetails',
     'vt_hash2filenames',
     'vt_hash2packer',
