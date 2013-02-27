@@ -14,31 +14,30 @@ __status__ = 'Development'
 
 __all__ = [
     'MalformityEntity',
-    'MyMalformityEntity',
-    'AnalysisEntity',
-    'InsiderThreat',
-    'AdvancedTargetedAttacker',
-    'OpportunityAttacker',
-    'OrganizedCrime',
-    'ZombieHost',
-    'CompromisedHost',
-    'BotnetDNSNode',
-    'C2',
-    'ServiceName',
+#    'MyMalformityEntity',
+#    'InsiderThreat',
+#    'AdvancedTargetedAttacker',
+#    'OpportunityAttacker',
+#    'OrganizedCrime',
+#    'ZombieHost',
+#    'CompromisedHost',
+#    'BotnetDNSNode',
+#    'C2',
+#    'ServiceName',
     'Hash',
-	'FilePath',
-    'HiddenFile',
+#   'FilePath',
+#    'HiddenFile',
     'RegistryEntry',
-    'UserAccount',
+#    'UserAccount',
     'MaliciousProcess',
-    'BrowserCookie',
-    'HTTPRequest',
+#    'BrowserCookie',
+#    'HTTPRequest',
     'Filename',
-    'MaliciousWebsite',
-    'Certificate',
-    'Exploit',
-    'ExploitationChain',
-    'Phishing',
+#    'MaliciousWebsite',
+#    'Certificate',
+#    'Exploit',
+#    'ExploitationChain',
+#    'Phishing',
     'UserAgent'
 ]
 
@@ -50,7 +49,7 @@ have an entity type name of Malformity.MyMalformityEntity. When adding a new ent
 name (Malformity.MyMalformityEntity) in the 'Unique entity type' field.
 """
 class MalformityEntity(Entity):
-    namespace = 'Malformity'
+    namespace = 'malformity'
 
 
 """
@@ -66,135 +65,131 @@ You can specify as many entity fields as you want by just adding an extra @Entit
     - decorator: a function that is invoked each and everytime the field's value is set or changed.
 TODO: define as many custom fields and entity types as you wish:)
 """    
-@EntityField(name='Malformity.fieldN', propname='fieldN', displayname='Field N', matchingrule=MatchingRule.Loose)
-@EntityField(name='Malformity.field1', propname='field1', displayname='Field 1', type=EntityFieldType.Integer)
-class MyMalformityEntity(MalformityEntity):
-    """
-    Uncomment the line below and comment out the pass if you wish to define a ridiculous entity type name like
-    'my.fancy.EntityType'
-    """
-    # name = my.fancy.EntityType
-    pass
+#@EntityField(name='Malformity.fieldN', propname='fieldN', displayname='Field N', matchingrule=MatchingRule.Loose)
+#@EntityField(name='Malformity.field1', propname='field1', displayname='Field 1', type=EntityFieldType.Integer)
+#class MyMalformityEntity(MalformityEntity):
+#    """
+#    Uncomment the line below and comment out the pass if you wish to define a ridiculous entity type name like
+#    'my.fancy.EntityType'
+#    """
+#    # name = my.fancy.EntityType
+#    pass
     
-class AnalysisEntity(Entity):
-    namespace = 'analysis'
+#@EntityField(name='malformity.insiderthreat', propname='propertiesinsiderthreat', displayname='Insider Threat')
+#class InsiderThreat(MalformityEntity):
+#    pass
 
 
-@EntityField(name='properties.insiderthreat', propname='propertiesinsiderthreat', displayname='Insider Threat')
-class InsiderThreat(AnalysisEntity):
-    pass
+#@EntityField(name='malformity.advancedtargetedattacker', propname='propertiesadvancedtargetedattacker', displayname='Advanced Targeted Attacker')
+#class AdvancedTargetedAttacker(MalformityEntity):
+#    pass
 
 
-@EntityField(name='properties.advancedtargetedattacker', propname='propertiesadvancedtargetedattacker', displayname='Advanced Targeted Attacker')
-class AdvancedTargetedAttacker(AnalysisEntity):
-    pass
+#@EntityField(name='malformity.opportunityattacker', propname='propertiesopportunityattacker', displayname='Opportunity Attacker')
+#class OpportunityAttacker(MalformityEntity):
+#    pass
 
 
-@EntityField(name='properties.opportunityattacker', propname='propertiesopportunityattacker', displayname='Opportunity Attacker')
-class OpportunityAttacker(AnalysisEntity):
-    pass
+#@EntityField(name='malformity.organizedcrime', propname='propertiesorganizedcrime', displayname='Organized Crime')
+#class OrganizedCrime(MalformityEntity):
+#    pass
 
 
-@EntityField(name='properties.organizedcrime', propname='propertiesorganizedcrime', displayname='Organized Crime')
-class OrganizedCrime(AnalysisEntity):
-    pass
+#@EntityField(name='malformity.zombie', propname='propertieszombie', displayname='Zombie')
+#class ZombieHost(MalformityEntity):
+#    pass
 
 
-@EntityField(name='properties.zombie', propname='propertieszombie', displayname='Zombie')
-class ZombieHost(AnalysisEntity):
-    pass
+#@EntityField(name='malformity.compromisedhost', propname='propertiescompromisedhost', displayname='Compromised Host')
+#class CompromisedHost(MalformityEntity):
+#    pass
 
 
-@EntityField(name='properties.compromisedhost', propname='propertiescompromisedhost', displayname='Compromised Host')
-class CompromisedHost(AnalysisEntity):
-    pass
+#@EntityField(name='malformity.botnetdnsrelay', propname='propertiesbotnetdnsrelay', displayname='Botnet DNS Relay')
+#class BotnetDNSNode(MalformityEntity):
+#    pass
 
 
-@EntityField(name='properties.botnetdnsrelay', propname='propertiesbotnetdnsrelay', displayname='Botnet DNS Relay')
-class BotnetDNSNode(AnalysisEntity):
-    pass
-
-
-@EntityField(name='properties.c2', propname='propertiesc2', displayname='C2')
-class C2(AnalysisEntity):
-    pass
+#@EntityField(name='malformity.c2', propname='propertiesc2', displayname='C2')
+#class C2(MalformityEntity):
+#    pass
     
 
-@EntityField(name='properties.servicename', propname='propertiesservicename', displayname='Service Name')
-class ServiceName(AnalysisEntity):
+#@EntityField(name='malformity.servicename', propname='propertiesservicename', displayname='Service Name')
+#class ServiceName(MalformityEntity):
+#    pass
+
+
+@EntityField(name='properties.hash', propname='hash', displayname='Hash')
+class Hash(MalformityEntity):
     pass
 
 
-@EntityField(name='properties.hash', propname='propertieshash', displayname='Hash')
-class Hash(AnalysisEntity):
+#@EntityField(name='malformity.filepath', propname='propertiesfilepath', displayname='File Path')
+#class FilePath(MalformityEntity):
+#    pass
+
+
+#@EntityField(name='malformity.hiddenfile', propname='propertieshiddenfile', displayname='Hidden File')
+#class HiddenFile(MalformityEntity):
+#    pass
+
+
+@EntityField(name='properties.registryentry', propname='registryentry', displayname='Registry Entry')
+class RegistryEntry(MalformityEntity):
     pass
 
 
-@EntityField(name='properties.filepath', propname='propertiesfilepath', displayname='File Path')
-class FilePath(AnalysisEntity):
+#@EntityField(name='malformity.useraccount', propname='propertiesuseraccount', displayname='User Account')
+#class UserAccount(MalformityEntity):
+#    pass
+
+
+@EntityField(name='properties.maliciousprocess', propname='maliciousprocess', displayname='Malicious Process')
+class MaliciousProcess(MalformityEntity):
     pass
 
 
-@EntityField(name='properties.hiddenfile', propname='propertieshiddenfile', displayname='Hidden File')
-class HiddenFile(AnalysisEntity):
+#@EntityField(name='malformity.browsercookie', propname='propertiesbrowsercookie', displayname='Browser Cookie')
+#class BrowserCookie(MalformityEntity):
+#    pass
+
+
+#@EntityField(name='malformity.httprequest', propname='propertieshttprequest', displayname='HTTP Request')
+#class HTTPRequest(MalformityEntity):
+#    pass
+
+
+@EntityField(name='properties.filename', propname='filename', displayname='Filename')
+class Filename(MalformityEntity):
     pass
 
 
-@EntityField(name='properties.registryentry', propname='propertiesregistryentry', displayname='Registry Entry')
-class RegistryEntry(AnalysisEntity):
-    pass
+#@EntityField(name='malformity.maliciouswebsite', propname='propertiesmaliciouswebsite', displayname='Malicious Host')
+#class MaliciousWebsite(MalformityEntity):
+#    pass
 
 
-@EntityField(name='properties.useraccount', propname='propertiesuseraccount', displayname='User Account')
-class UserAccount(AnalysisEntity):
-    pass
+#@EntityField(name='malformity.certificate', propname='propertiescertificate', displayname='Certificate')
+#class Certificate(MalformityEntity):
+#    pass
 
 
-@EntityField(name='properties.maliciousprocess', propname='propertiesmaliciousprocess', displayname='Malicious Process')
-class MaliciousProcess(AnalysisEntity):
-    pass
+#@EntityField(name='malformity.exploit', propname='propertiesexploit', displayname='Exploit')
+#class Exploit(MalformityEntity):
+#    pass
 
 
-@EntityField(name='properties.browsercookie', propname='propertiesbrowsercookie', displayname='Browser Cookie')
-class BrowserCookie(AnalysisEntity):
-    pass
+#@EntityField(name='malformity.exploitationchain', propname='propertiesexploitationchain', displayname='Exploitation Chain')
+#class ExploitationChain(MalformityEntity):
+#    pass
 
 
-@EntityField(name='properties.httprequest', propname='propertieshttprequest', displayname='HTTP Request')
-class HTTPRequest(AnalysisEntity):
-    pass
+#@EntityField(name='malformity.phishing', propname='propertiesphishing', displayname='Phishing')
+#class Phishing(MalformityEntity):
+#    pass
 
 
-@EntityField(name='properties.filename', propname='propertiesfilename', displayname='Filename')
-class Filename(AnalysisEntity):
-    pass
-
-
-@EntityField(name='properties.maliciouswebsite', propname='propertiesmaliciouswebsite', displayname='Malicious Host')
-class MaliciousWebsite(AnalysisEntity):
-    pass
-
-
-@EntityField(name='properties.certificate', propname='propertiescertificate', displayname='Certificate')
-class Certificate(AnalysisEntity):
-    pass
-
-
-@EntityField(name='properties.exploit', propname='propertiesexploit', displayname='Exploit')
-class Exploit(AnalysisEntity):
-    pass
-
-
-@EntityField(name='properties.exploitationchain', propname='propertiesexploitationchain', displayname='Exploitation Chain')
-class ExploitationChain(AnalysisEntity):
-    pass
-
-
-@EntityField(name='properties.phishing', propname='propertiesphishing', displayname='Phishing')
-class Phishing(AnalysisEntity):
-    pass
-
-
-@EntityField(name='properties.useragent', propname='propertiesuseragent', displayname='User Agent')
-class UserAgent(AnalysisEntity):
+@EntityField(name='properties.useragent', propname='useragent', displayname='User Agent')
+class UserAgent(MalformityEntity):
 	pass
