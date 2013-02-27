@@ -16,7 +16,6 @@ __all__ = [
     'malwr_hash2filename',
     'pDNS_NS2Domains',
     'pDNS_wildcardsearch',
-    'bluecoat_sitereview',
     'bit9_hashdetails',
     'vt_hash2filenames',
     'vt_hash2packer',
