@@ -30,7 +30,7 @@ Malformity has been tested on Mac OSX. Transforms are written in Python version 
 In order to make full use of Malformity, the setup script will download additional modules.
 
 If for some reason these fail, requirements are:
-* Canari 0.7
+* Canari 0.9
 * Mechanize 0.2.5
 * BeautifulSoup 3.2.1
 
