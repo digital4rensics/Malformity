@@ -33,6 +33,7 @@ If for some reason these fail, requirements are:
 * Canari 0.9
 * Mechanize 0.2.5
 * BeautifulSoup 3.2.1
+* requests 1.2.0
 
 ### 2.3 - Installation
 ```bash

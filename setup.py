@@ -17,6 +17,7 @@ setup(
         'canari==0.9',
         'mechanize==0.2.5',
         'BeautifulSoup==3.2.1',
+	'requests==1.2.0'
     ],
     dependency_links=[
         # custom links for the install_requires
