@@ -39,13 +39,17 @@ def dotransform(request, response):
 	page = loginSearch(request.value)
 	results = BeautifulSoup(page)
 
-	name = results.find('td', {'class' : 'FourColumns_Column_2'}).text
-	response += Filename(name)
+	try:
+		name = results.find('td', {'class' : 'FourColumns_Column_2'}).text
+		response += Filename(name)
 	
-	desc = results.find('td', {'class' : 'FourColumns_Column_4'}).text
-	response += Phrase(desc)
+		desc = results.find('td', {'class' : 'FourColumns_Column_4'}).text
+		response += Phrase(desc)
 	
-	result = results.find('td', {'bgcolor' : '#eaffea'}).text
-	response += Phrase(result)
-	
+		result = results.find('td', {'bgcolor' : '#eaffea'}).text
+		response += Phrase(result)
+	except:
+		#no results
+		pass
+		
 	return response

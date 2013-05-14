@@ -10,6 +10,7 @@ __maintainer__ = 'Keith Gilbert - @digital4rensics'
 __email__ = 'Keith@digital4rensics.com'
 __status__ = 'Development'
 __all__ = [
+    'vt_priv_ip2hash',
     'vt_priv_domain2hash',
     'threatexpert_hash2url',
     'vt_domain2ip',
