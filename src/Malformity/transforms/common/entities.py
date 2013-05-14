@@ -23,7 +23,7 @@ __all__ = [
 #    'CompromisedHost',
 #    'BotnetDNSNode',
 #    'C2',
-#    'ServiceName',
+    'ServiceName',
     'Hash',
 #   'FilePath',
 #    'HiddenFile',
@@ -31,7 +31,7 @@ __all__ = [
 #    'UserAccount',
     'MaliciousProcess',
 #    'BrowserCookie',
-#    'HTTPRequest',
+    'HTTPRequest',
     'Filename',
 #    'MaliciousWebsite',
 #    'Certificate',
@@ -115,9 +115,9 @@ TODO: define as many custom fields and entity types as you wish:)
 #    pass
     
 
-#@EntityField(name='malformity.servicename', propname='propertiesservicename', displayname='Service Name')
-#class ServiceName(MalformityEntity):
-#    pass
+@EntityField(name='properties.servicename', propname='servicename', displayname='Service Name')
+class ServiceName(MalformityEntity):
+    pass
 
 
 @EntityField(name='properties.hash', propname='hash', displayname='Hash')
@@ -155,9 +155,9 @@ class MaliciousProcess(MalformityEntity):
 #    pass
 
 
-#@EntityField(name='malformity.httprequest', propname='propertieshttprequest', displayname='HTTP Request')
-#class HTTPRequest(MalformityEntity):
-#    pass
+@EntityField(name='properties.httprequest', propname='httprequest', displayname='HTTP Request')
+class HTTPRequest(MalformityEntity):
+    pass
 
 
 @EntityField(name='properties.filename', propname='filename', displayname='Filename')

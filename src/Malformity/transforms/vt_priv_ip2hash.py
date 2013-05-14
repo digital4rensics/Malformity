@@ -5,6 +5,7 @@ from canari.framework import configure
 from common.entities import Hash
 from canari.maltego.entities import IPv4Address
 from common.vt import bsearch
+from canari.maltego.message import UIMessage
 
 __author__ = 'Keith Gilbert - @digital4rensics'
 __copyright__ = 'Copyright 2013, Malformity Project'
@@ -36,6 +37,6 @@ def dotransform(request, response):
     		for result in results:
     			response += Hash(result)
     except:
-    	print 'Error running transform'	
+    	response += UIMessage(data['verbose_msg'])
     
     return response
