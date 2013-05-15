@@ -22,7 +22,7 @@ __all__ = [
 ]
 
 @configure(
-    label='Domain Search - VirusTotal',
+    label='Domain Search - VirusTotal [Private]',
     description='Searches VirusTotal for samples based on a domain',
     uuids=[ 'malformity.v1.VT_Priv_Domain2Hash' ],
     inputs=[ ( 'VirusTotal', Domain ) ],

@@ -22,7 +22,7 @@ __all__ = [
 ]
 
 @configure(
-    label='Hash to ExifTool - VirusTotal',
+    label='Hash to ExifTool - VirusTotal [Private]',
     description='Returns ExifTool details from a report on VT',
     uuids=[ 'malformity.v1.VT_Priv_Hash2ExifTool' ],
     inputs=[ ( 'VirusTotal', Hash ) ],

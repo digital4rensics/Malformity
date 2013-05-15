@@ -22,7 +22,7 @@ __all__ = [
 ]
 
 @configure(
-    label='Hash to Network Information - VirusTotal',
+    label='Hash to Network Information - VirusTotal [Private]',
     description='Returns network details from a behavioural report on VT',
     uuids=[ 'malformity.v1.VT_Priv_Hash2NetActivity' ],
     inputs=[ ( 'VirusTotal', Hash ) ],

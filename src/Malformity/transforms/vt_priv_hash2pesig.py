@@ -22,7 +22,7 @@ __all__ = [
 ]
 
 @configure(
-    label='Hash to PE Signature - VirusTotal',
+    label='Hash to PE Signature - VirusTotal [Private]',
     description='Returns SigCheck details from a PESig section of a report on VT',
     uuids=[ 'malformity.v1.VT_Priv_Hash2PESig' ],
     inputs=[ ( 'VirusTotal', Hash ) ],

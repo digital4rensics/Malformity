@@ -22,7 +22,7 @@ __all__ = [
 ]
 
 @configure(
-    label='IP Search - VirusTotal',
+    label='IP Search - VirusTotal [Private]',
     description='Searches VirusTotal for samples based on an IP',
     uuids=[ 'malformity.v1.VT_Priv_IP2Hash' ],
     inputs=[ ( 'VirusTotal', IPv4Address ) ],
