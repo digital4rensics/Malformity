@@ -33,10 +33,13 @@ __all__ = [
 def dotransform(request, response):
 	page = build(request.value)
 	try:    
-		results = page.find(text=re.compile('File names ')).findNext('ol').findAll('li')
+		results = page.findAll('td', {"class" : "field-key"})
 		for entry in results:
 			text = entry.text
-			response += Filename(text)
+			if re.search('File names', text):
+				lines = ''.join(entry.next.next.next.findAll(text=True))
+				for line in lines.split():
+					response += Filename(line)
 	except:
 		raise MaltegoException('Could not find Filenames')
 

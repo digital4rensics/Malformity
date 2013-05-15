@@ -34,13 +34,13 @@ __all__ = [
 def dotransform(request, response):
 	page = build(request.value)
 	try:    
-		results = page.findAll('h5')
+		results = page.findAll('span', {"class" : "field-key"})
 		for entry in results:
 			text = entry.text
-			if re.search('F-Prot packer identifier', text):
+			if re.search('F-PROT', text):
 				e = entry.next.next.strip()
 				response += Phrase(e)
-			elif re.search('Command packer identifier', text):
+			elif re.search('Command', text):
 				e = entry.next.next.strip()
 				response += Phrase(e)
 			elif re.search('PEiD packer identifier', text):
