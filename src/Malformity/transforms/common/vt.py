@@ -13,7 +13,7 @@ __copyright__ = 'Copyright 2013, Malformity Project'
 __credits__ = []
 
 __license__ = 'GPL'
-__version__ = '0.1'
+__version__ = '0.3'
 __maintainer__ = 'Keith Gilbert - @digital4rensics'
 __email__ = 'Keith@digital4rensics.com'
 __status__ = 'Development'
@@ -42,13 +42,20 @@ privkey = config['virustotal/privkey']
 def bsearch(term):
 	params = {'apikey': privkey, 'query': 'behaviour:'+term}
 	response = requests.get('https://www.virustotal.com/vtapi/v2/file/search', params=params, verify=False)
-	response_json = response.json()
+	json_response = response.json()
 	
-	return response_json
+	return json_response
 	
-def getreport(hash):
+def getbehavior(hash):
 	params = {'apikey' : privkey, 'hash' : hash}
 	response = requests.get('https://www.virustotal.com/vtapi/v2/file/behaviour', params=params, verify=False)
-	response_json = response.json()
+	json_response = response.json()
 	
-	return response_json
+	return json_response
+
+def getreport(hash):
+	params = {'apikey': privkey, 'resource': hash, 'allinfo' : 1}
+	response = requests.get('https://www.virustotal.com/vtapi/v2/file/report', params=params, verify=False)
+	json_response = response.json()
+	
+	return json_response

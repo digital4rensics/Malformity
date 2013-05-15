@@ -5,7 +5,7 @@ from canari.framework import configure
 from common.entities import Hash, UserAgent, HTTPRequest
 from canari.maltego.entities import Domain, IPv4Address, URL, Port
 from canari.maltego.message import UIMessage
-from common.vt import getreport
+from common.vt import getbehavior
 
 __author__ = 'Keith Gilbert - @digital4rensics'
 __copyright__ = 'Copyright 2013, Malformity Project'
@@ -30,7 +30,7 @@ __all__ = [
 )
 
 def dotransform(request, response):
-	data = getreport(request.value)
+	data = getbehavior(request.value)
 
 	try:
 		try:
