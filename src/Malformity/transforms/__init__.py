@@ -10,6 +10,7 @@ __maintainer__ = 'Keith Gilbert - @digital4rensics'
 __email__ = 'Keith@digital4rensics.com'
 __status__ = 'Development'
 __all__ = [
+    'vt_hash2exiftool',
     'vt_priv_hash2exiftool',
     'vt_priv_hash2pesig',
     'vt_priv_hash2netactivity',
