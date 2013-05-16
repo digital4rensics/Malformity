@@ -18,5 +18,6 @@ __all__ = [
     'vicheck',
     'vt',
     'isc',
-    'whois'
+    'whois',
+    'malc0de'
 ]
