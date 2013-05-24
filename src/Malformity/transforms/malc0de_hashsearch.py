@@ -23,7 +23,7 @@ __all__ = [
 
 #@superuser
 @configure(
-    label='Hash to URL [Malc0de]',
+    label='Hash to IP [Malc0de]',
     description='Returns IP and URL entities from search matches on Malc0de',
     uuids=[ 'malformity.v1.Malc0de_HashSearch' ],
     inputs=[ ( 'Malc0de', Hash ) ],
@@ -44,7 +44,7 @@ def dotransform(request, response):
     		
     		e = IPv4Address(temp[2])
     		e += Field('URL', temp[1], displayname='URL')
-    		e += Field('AS', temp[4], displayname='AS Number')
+    		e += Field('AS', temp[4], displayname='AS')
     		e += Field('Date', temp[0], displayname='Date')
     		response += e
 
