@@ -24,7 +24,7 @@ __all__ = [
 
 #@superuser
 @configure(
-    label='IP to Hash, URL [Malc0de]',
+    label='IP to Hash Malc0de]',
     description='Returns Hash and URL entities from search matches on Malc0de',
     uuids=[ 'malformity.v1.Malc0de_IPSearch' ],
     inputs=[ ( 'Malc0de', IPv4Address ) ],
