@@ -4,14 +4,15 @@ from canari.maltego.utils import debug, progress
 from canari.framework import configure #, superuser
 from common.malc0de import build
 from common.entities import Hash
-from canari.maltego.entities import IPv4Address, URL, AS, Phrase
+from canari.maltego.entities import IPv4Address
+from canari.maltego.message import Field
 
 __author__ = 'Keith Gilbert - @digital4rensics'
 __copyright__ = 'Copyright 2013, Malformity Project'
 __credits__ = []
 
 __license__ = 'GPL'
-__version__ = '0.1'
+__version__ = '0.2'
 __maintainer__ = 'Keith Gilbert - @digital4rensics'
 __email__ = 'Keith@digital4rensics.com'
 __status__ = 'Development'
@@ -42,11 +43,10 @@ def dotransform(request, response):
     		for column in hit.findAll('td'):
     			temp.append(column.text)
     		
-    		e = URL(temp[1])
-    		e.url = temp[1]
+    		e = Hash(temp[6])
+    		e += Field('URL', temp[1], displayname='URL')
+    		e += Field('AS', temp[4], displayname='AS Number')
+    		e += Field('Date', temp[0], displayname='Date')
     		response += e
-    		response += AS(temp[4])
-    		response += Phrase(temp[0])
-    		response += Hash(temp[6])
 			
     return response
