@@ -37,7 +37,6 @@ def build(hash):
 		
 	return page
 
-privkey = config['virustotal/privkey']
 	
 def bsearch(term):
 	params = {'apikey': privkey, 'query': 'behaviour:'+term}
@@ -47,6 +46,7 @@ def bsearch(term):
 	return json_response
 	
 def getbehavior(hash):
+	privkey = config['virustotal/privkey']
 	params = {'apikey' : privkey, 'hash' : hash}
 	response = requests.get('https://www.virustotal.com/vtapi/v2/file/behaviour', params=params, verify=False)
 	json_response = response.json()
@@ -54,6 +54,7 @@ def getbehavior(hash):
 	return json_response
 
 def getreport(hash):
+	privkey = config['virustotal/privkey']
 	params = {'apikey': privkey, 'resource': hash, 'allinfo' : 1}
 	response = requests.get('https://www.virustotal.com/vtapi/v2/file/report', params=params, verify=False)
 	json_response = response.json()

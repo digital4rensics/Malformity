@@ -11,10 +11,6 @@ import urllib2
 from cStringIO import StringIO
 from canari.config import config
 
-DEFAULT_DNSDB_SERVER = 'https://dnsdb-api.isc.org'
-
-options = None
-
 class DnsdbClient(object):
     def __init__(self, server, apikey):
         self.server = server
@@ -45,8 +41,8 @@ class DnsdbClient(object):
     def _query(self, path):
         res = []
         url = '%s/lookup/%s' % (self.server, path)
-        if limit != 0:
-            url += '?limit=%d' % lim
+        #if limit != 0:
+            #url += '?limit=%d' % lim
         req = urllib2.Request(url)
         req.add_header('Accept', 'application/json')
         req.add_header('X-Api-Key', self.apikey)
@@ -63,11 +59,14 @@ class DnsdbClient(object):
         return res
 
 def query(opt, sub, lim, sor):
-	global cfg
-	global options
-	global limit
-	limit = lim
+	#global cfg
+	#global options
+	#global limit
+	#limit = lim
 	
+	DEFAULT_DNSDB_SERVER = 'https://dnsdb-api.isc.org'
+
+	options = None
 	"""
 	parser = optparse.OptionParser()
 	parser.add_option('-r', '--rrset', dest='rrset', type='string',
