@@ -53,12 +53,12 @@ def dotransform(request, response):
 				uri.url = request['uri']
 				
 				ua = UserAgent(request['user-agent'])
-				req = HTTPRequest(request['data'])
+				#req = HTTPRequest(request['data'])
 				port = Port(request['port'])
 				
 				response += uri
 				response += ua
-				response += req
+				#response += req
 				response += port
 		except:
 			#no http data

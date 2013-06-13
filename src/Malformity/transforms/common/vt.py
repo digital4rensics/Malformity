@@ -39,6 +39,7 @@ def build(hash):
 
 	
 def bsearch(term):
+	privkey = config['virustotal/privkey']
 	params = {'apikey': privkey, 'query': 'behaviour:'+term}
 	response = requests.get('https://www.virustotal.com/vtapi/v2/file/search', params=params, verify=False)
 	json_response = response.json()
