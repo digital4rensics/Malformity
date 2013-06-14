@@ -42,22 +42,28 @@ def bsearch(term):
 	privkey = config['virustotal/privkey']
 	params = {'apikey': privkey, 'query': 'behaviour:'+term}
 	response = requests.get('https://www.virustotal.com/vtapi/v2/file/search', params=params, verify=False)
-	json_response = response.json()
-	
-	return json_response
+	try:
+		json_response = response.json()
+		return json_response
+	except:
+		return None
 	
 def getbehavior(hash):
 	privkey = config['virustotal/privkey']
 	params = {'apikey' : privkey, 'hash' : hash}
 	response = requests.get('https://www.virustotal.com/vtapi/v2/file/behaviour', params=params, verify=False)
-	json_response = response.json()
-	
-	return json_response
+	try:
+		json_response = response.json()
+		return json_response
+	except:
+		return None
 
 def getreport(hash):
 	privkey = config['virustotal/privkey']
 	params = {'apikey': privkey, 'resource': hash, 'allinfo' : 1}
 	response = requests.get('https://www.virustotal.com/vtapi/v2/file/report', params=params, verify=False)
-	json_response = response.json()
-	
-	return json_response
+	try:
+		json_response = response.json()
+		return json_response
+	except:
+		return None
