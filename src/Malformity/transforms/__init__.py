@@ -10,6 +10,7 @@ __maintainer__ = 'Keith Gilbert - @digital4rensics'
 __email__ = 'Keith@digital4rensics.com'
 __status__ = 'Development'
 __all__ = [
+    'Shadowserver_AVScan',
     'malc0de_hash2as',
     'malc0de_hash2url',
     'malc0de_ip2as',
