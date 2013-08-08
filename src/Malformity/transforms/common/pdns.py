@@ -64,7 +64,7 @@ def query(opt, sub, lim, sor):
 	#global limit
 	#limit = lim
 	
-	DEFAULT_DNSDB_SERVER = 'https://dnsdb-api.isc.org'
+	DEFAULT_DNSDB_SERVER = 'https://api.dnsdb.info'
 
 	options = None
 	"""
