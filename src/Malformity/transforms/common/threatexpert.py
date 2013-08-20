@@ -21,7 +21,7 @@ __all__ = [
 
 def build(hash):
 	# Construct the request
-	url = 'http://threatexpert.com/report.aspx?md5=' + hash
+	url = 'http://www.threatexpert.com/report.aspx?md5=' + hash
 	browser = mechanize.Browser()
 	
 	# Retrieve the page and construct BS entity if it exists
