@@ -23,9 +23,10 @@ __all__ = [
 ]
 
 def build(hash):
-	url = 'http://www.virustotal.com/file/' + hash + '/analysis/'
+	url = 'https://www.virustotal.com/en/file/' + hash + '/analysis/'
 	
 	browser = mechanize.Browser()
+	browser.addheaders = [('User-agent', 'Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/28.0.1468.0 Safari/537.36')]
 	
 	# Retrieve the page and construct BS entity if it exists
 	try:

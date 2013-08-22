@@ -38,8 +38,9 @@ def dotransform(request, response):
 			text = entry.text
 			if re.search('File names', text):
 				lines = ''.join(entry.next.next.next.findAll(text=True))
-				for line in lines.split():
-					response += Filename(line)
+				for line in lines.split('\n'):
+					if line.strip() != "":
+						response += Filename(line)
 	except:
 		raise MaltegoException('Could not find Filenames')
 
