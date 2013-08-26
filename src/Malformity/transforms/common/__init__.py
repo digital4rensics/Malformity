@@ -19,5 +19,6 @@ __all__ = [
     'vt',
     'isc',
     'whois',
-    'malc0de'
+    'malc0de',
+    'robtex'
 ]
