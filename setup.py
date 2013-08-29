@@ -14,7 +14,7 @@ setup(
         '' : [ '*.gif', '*.png', '*.conf', '*.mtz' ] # list of resources
     },
     install_requires=[
-        'canari==0.9',
+        'canari==1.0',
         'mechanize==0.2.5',
         'BeautifulSoup==3.2.1',
 	'requests==1.2.0'
