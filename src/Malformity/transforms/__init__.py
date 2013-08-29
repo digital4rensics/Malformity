@@ -10,6 +10,7 @@ __maintainer__ = 'Keith Gilbert - @digital4rensics'
 __email__ = 'Keith@digital4rensics.com'
 __status__ = 'Development'
 __all__ = [
+    'robtex_getSubdomains',
     'robtex_ip2domains',
     'metascan_hashcheck',
     'threatexpert_hash2domain',

@@ -3,7 +3,7 @@
 from canari.maltego.utils import debug, progress
 from canari.framework import configure #, superuser
 from common.robtex import build
-from canari.maltego.entities import IPv4Address, Domain
+from canari.maltego.entities import Domain
 from canari.maltego.message import UIMessage
 
 __author__ = 'Keith Gilbert - @digital4rensics'
@@ -21,21 +21,25 @@ __all__ = [
 ]
 
 @configure(
-    label='IP to Domains [Robtex]',
+    label='Get Subdomains [Robtex]',
     description='Returns Domains listed on Robtex for an IP',
-    uuids=[ 'malformity.v1.Robtex_IP2Domain' ],
-    inputs=[ ( 'Robtex', IPv4Address ) ],
+    uuids=[ 'malformity.v1.Robtex_getSubdomains' ],
+    inputs=[ ( 'Robtex', Domain ) ],
     debug=True
 )
 def dotransform(request, response):
     page = build(request.value)
     
     doms = []
-    try:
-    	section = page.find("span", {"id" : "sharedha"}).findNext('ul')
+    if page.find("span", {"id" : "sharedsub"}):
+    	section = page.find("span", {"id" : "sharedsub"}).findNext('ul')
     	for entry in section.findAll("li"):
     		response += Domain(entry.text)
-    except:
-    	response += UIMessage('No domains in robtex')
+    elif page.find("span", {"id" : "sharedsubv"}):
+    	section = page.find("span", {"id" : "sharedsubv"}).findNext('ul')
+    	for entry in section.findAll("li"):
+    		response += Domain(entry.text)	
+    else:
+    	response += UIMessage('No subdomains in robtex')
     	
     return response
