@@ -12,7 +12,7 @@ __status__ = 'Development'
 __all__ = [
     'robtex_getSubdomains',
     'robtex_ip2domains',
-    'metascan_hashcheck',
+   #'metascan_hashcheck',
     'threatexpert_hash2domain',
     'Shadowserver_AVScan',
     'malc0de_hash2as',
