@@ -49,7 +49,7 @@ have an entity type name of Malformity.MyMalformityEntity. When adding a new ent
 name (Malformity.MyMalformityEntity) in the 'Unique entity type' field.
 """
 class MalformityEntity(Entity):
-    namespace = 'malformity'
+    _namespace_ = 'malformity'
 
 
 """
