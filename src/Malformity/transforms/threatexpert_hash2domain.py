@@ -37,6 +37,12 @@ def dotransform(request, response):
     except:
     	single = None
     	pass
+
+    try:
+        single = page.find(text='The following Host Names were requested from a host database:').findNext()
+    except:
+        single = None
+        pass
     
     try:
     	single2 = page.find(text='The following Internet Connection was established:').findNext()
