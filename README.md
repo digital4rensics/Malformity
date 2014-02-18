@@ -45,6 +45,11 @@ After completing setup, the command below can be used to install Malformity in M
 ```bash
 $ canari install-package Malformity
 ```
+For Tungsten users:
+```bash
+$ canari create-package Malformity
+```
+This will create a .mtz in the working directory, which can then be imported in to Maltego
 
 ## 3.0 Credits
 Special thanks is due to the following people:
