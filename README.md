@@ -47,7 +47,7 @@ $ canari install-package Malformity
 ```
 For Tungsten users:
 ```bash
-$ canari create-package Malformity
+$ canari create-profile Malformity
 ```
 This will create a .mtz in the working directory, which can then be imported in to Maltego
 
