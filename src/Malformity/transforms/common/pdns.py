@@ -1,5 +1,5 @@
 #!/usr/bin/env python
-# Original script authored by ISC, found here: ftp://ftp.isc.org/isc/nmsg/misc/isc_dnsdb_query.py
+# Original script authored by ISC, found here: https://www.farsightsecurity.com/Services/DNSDB/
 # Modifications made by @digital4rensics for use in the Malformity project
 
 import json
