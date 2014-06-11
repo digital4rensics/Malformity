@@ -37,9 +37,9 @@ def dotransform(request, response):
     try:
     	list = page.find(text='File: ').findNext('b')
     except:
-    	raise MaltegoException('No DNS Queries')
+    	raise MaltegoException('No filename')
     
-    if list.text != 'none':
+    if list.text != '':
 		response += Filename(list.text)
     
     return response
